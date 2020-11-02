@@ -16,9 +16,29 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
+let convertToString = () => {
+  
+  let newString = document.getElementById("numberToString").value;
+
+  let convertedString = newString;
+
+  document.getElementById("converted-string").innerHTML = "The Number Is Now:  " + newString;
+
+}
+
 
 
 // Write a JavaScript program to convert a string to the number.
+
+let toNumber = () => {
+  let number = document.getElementById("stringToNumber").value;
+
+  let string = parseInt(number);
+
+  document.getElementById("display-number").innerHTML = "The String Is Now: " + string;
+
+  
+}
 
 
 
@@ -30,15 +50,45 @@ const displayDate = () => {
   // * NaN
   // * String
   
+let getDataType = () => {
+  let input = document.getElementById("dataType").value;
 
+  if (input == '') {
+  document.getElementById("data-type").innerHTML = "Your Data Is: Undefined";
+} else if(input == 'true' || input == 'false') {
+  document.getElementById("data-type").innerHTML = "Your Data Is A: Boolean";
+} else if(isNaN(input) == false) {
+  document.getElementById("data-type").innerHTML = "Your Data Is A: Number";
+} else if(isNaN(input) == true) {
+  document.getElementById("data-type").innerHTML = "Your Data Is A: String";
+} else {
+  document.getElementById("data-type").innerHTML = "Your Data Is: NaN";
+}
+};
   
 // Write a JavaScript program that adds 2 numbers together.
 
 
+let addNums = () => {
+  let firstNum = parseInt(document.getElementById("first-num").value);
+  let secondNum = parseInt(document.getElementById("second-num").value);
+
+  document.getElementById("sum").innerHTML = firstNum + secondNum;
+}
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+let numberCheck = () => {
+  let numberUnderTen = document.getElementById("under-10").value;
 
+  if (numberUnderTen <= 10 && (isNaN(numberUnderTen) == false)) {
+    document.getElementById("checked-num").innerHTML = "You did it!"
+} else if (numberUnderTen <= 10 || (isNaN(numberUnderTen) == true)) {
+    document.getElementById("checked-num").innerHTML = "That's not a number."
+} else if (numberUnderTen >= 10 && (isNaN(numberUnderTen) == false)) {
+    document.getElementById("checked-num").innerHTML = "That's too high."
+}
+};
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 

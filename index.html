@@ -2,14 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Date and Time</title>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1>Hello World!</h1>
     <hr/>
-    <div id="display-element"></div>
+    <div id="display-element">The Date and Time Will Appear Here!</div>
     <button onclick="displayDate()">Click Me</button>
     <hr/>
+    <input type="number" id="numberToString" name="numberToString"> <br>
+    <button onclick="convertToString()">Convert Number to String</button>
+    <div id="converted-string">The Number Is Now:</div>
+    <br>
+    <input type="text" id="stringToNumber" name="stringToNumber">
+    <br>
+    <button onclick="toNumber()">Convert String to Number</button>
+    <div id="display-number">The String Is Now:</div>
+    <br>
+    <div>Type in anything and find out what data type it is</div>
+    <input type="text" id="dataType" name="dataType">
+    <br>
+    <button onclick="getDataType()">Click Me</button>
+    <br>
+    <div id="data-type">Your Data Is A: </div>
+    <br>
+    <div>Add two numbers</div>
+    <input type="number" name="first-num" id="first-num">
+    <br>
+    <input type="number" name="second-num" id="second-num">
+    <br>
+    <button onclick="addNums()">Add</button>
+    <br>
+    <div id="sum"></div>
+    <br>
+    <div>Type in a number below 10</div>
+    <input type="text" name="under-10" id="under-10">
+    <br>
+    <button onclick="numberCheck()">Go!</button>
+    <div id="checked-num"></div>
   </body>
 </html>
